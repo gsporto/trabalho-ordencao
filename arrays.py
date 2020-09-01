@@ -16,7 +16,7 @@ def handleArrays(filename):
 
 def writeresult(type, size, time):
     text_file = open("results.txt", "a")
-    text_file.write(f"{type}, {size}, {time}s\n")
+    text_file.write(f"{type}; {size}; {time}s\n")
     text_file.close()
 
 
