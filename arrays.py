@@ -1,8 +1,11 @@
+import os
 import time
 
 
 def handleArrays(filename):
     array = []
+    dirname = os.path.dirname(__file__)
+    filename = os.path.join(dirname, "arrays", filename)
     file1 = open(filename, "r")
     Lines = file1.readlines()
     for line in Lines:
