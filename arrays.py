@@ -15,12 +15,12 @@ def handleArrays(filename):
 
 
 def writeresult(type, size, time):
-    text_file = open("resultados.txt", "a")
+    text_file = open("results.txt", "a")
     text_file.write(f"{type}, {size}, {time}s\n")
     text_file.close()
 
 
-def cleanresult():
+def clearresult():
     text_file = open("resultados.txt", "w")
     text_file.write("")
     text_file.close()
@@ -75,7 +75,7 @@ def shellSort(arr):
 
 types = ["aleatorio", "ordenado", "repetido", "reverso", "semiOrdenado"]
 sizes = [10, 100, 1000, 10000, 100000, 1000000, 10000000]
-cleanresult()
+clearresult()
 for size in sizes:
     for type in types:
         filename = f"{type}{size}.txt"
