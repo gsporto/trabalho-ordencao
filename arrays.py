@@ -21,7 +21,7 @@ def writeresult(type, size, time):
 
 
 def clearresult():
-    text_file = open("resultados.txt", "w")
+    text_file = open("results.txt", "w")
     text_file.write("")
     text_file.close()
 
@@ -81,9 +81,9 @@ for size in sizes:
         filename = f"{type}{size}.txt"
         start_time = time.time()
         array = handleArrays(filename)
-        ##array = gnomeSort(array)
+        array = gnomeSort(array)
         ##array = combSort(array)
-        array = shellSort(array)
+        ##array = shellSort(array)
         timeElapsed = time.time() - start_time
         print(f"Array {type} com {size} posições demorou {timeElapsed} segundos")
         writeresult(type, size, timeElapsed)
